@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details </title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .movie-details {
+            display: flex;
+            flex-wrap: wrap;
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Image Section */
+        .movie-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .movie-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Details Section */
+        .movie-info {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .movie-info h1 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .movie-info .year {
+            font-size: 20px;
+            color: #ff5733;
+        }
+
+        /* Back Button */
+        .back-button {
+            align-self: flex-start;
+            text-decoration: none;
+            color: #fff;
+            background: #ff5733;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #ff784e;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .movie-details {
+                flex-direction: column;
+            }
+
+            .movie-image {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-details">
+        <!-- Image Section -->
+        <div class="movie-image">
+            <img src="../assets/12.jpg" alt="">
+        </div>
+        <!-- Details Section -->
+        <div class="movie-info">
+            <a href="../movies.html" class="back-button">⬅ Back to Movies</a>
+            <h1>Moan 2</h1>
+            <div class="year">Release Year: <strong>2024</strong></div>
+            <p>
+                Inside Out 2 is a 2024 American animated coming-of-age film produced by Pixar Animation Studios for Walt Disney Pictures. The sequel to Inside Out (2015), it was directed by Kelsey Mann and produced by Mark Nielsen, from a screenplay written by Meg LeFauve and Dave Holstein, and a story conceived by Mann and LeFauve. Amy Poehler, Phyllis Smith, Lewis Black, Diane Lane, and Kyle MacLachlan reprise their roles from the first film, with Maya Hawke, Kensington Tallman (replacing Kaitlyn Dias), Liza Lapira (replacing Mindy Kaling), Tony Hale (replacing Bill Hader), Ayo Edebiri, Lilimar, Grace Lu, Sumayyah Nuriddin-Green, Adèle Exarchopoulos, and Paul Walter Hauser joining the cast. The film tells the story of Riley's emotions as they find themselves joined by other new emotions that want to take over Riley's mind.
+
+                Work on Inside Out 2 commenced in 2020 after Mann revisited photos of one of his childhood birthday parties. The film features Pixar chief creative officer Pete Docter's "five to 27 emotions" idea from the first film that Mann pitched during its production to utilize "truthful" worldbuilding.
+                
+                Inside Out 2 premiered at the El Capitan Theatre in Los Angeles on June 10, 2024, and was released in theaters in the United States on June 14. The film received positive reviews from critics and has grossed $1.699 billion worldwide, breaking multiple box-office records, including becoming the highest-grossing animated film of all time. It also became the highest-grossing film of 2024 and the eighth-highest-grossing film of all time. It is currently nominated for Best Animated Feature Film and Cinematic and Box Office Achievement at the 82nd Golden Globe Awards.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

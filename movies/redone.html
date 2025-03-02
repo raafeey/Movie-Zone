@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details </title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .movie-details {
+            display: flex;
+            flex-wrap: wrap;
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Image Section */
+        .movie-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .movie-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Details Section */
+        .movie-info {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .movie-info h1 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .movie-info .year {
+            font-size: 20px;
+            color: #ff5733;
+        }
+
+        /* Back Button */
+        .back-button {
+            align-self: flex-start;
+            text-decoration: none;
+            color: #fff;
+            background: #ff5733;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #ff784e;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .movie-details {
+                flex-direction: column;
+            }
+
+            .movie-image {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-details">
+        <!-- Image Section -->
+        <div class="movie-image">
+            <img src="../assets/17.avif" alt="">
+        </div>
+        <!-- Details Section -->
+        <div class="movie-info">
+            <a href="../movies.html" class="back-button">⬅ Back to Movies</a>
+            <h1>Red One</h1>
+            <div class="year">Release Year: <strong>2024</strong></div>
+            <p>
+                Red One is a 2024 American Christmas action film directed by Jake Kasdan and written by Chris Morgan, from an original story by Hiram Garcia. It stars Dwayne Johnson, Chris Evans, Lucy Liu, J. K. Simmons, Kiernan Shipka, Bonnie Hunt, Nick Kroll, Kristofer Hivju, and Wesley Kimmel. In the film, Callum Drift (Johnson), the head of North Pole security, teams up with the hacker Jack O'Malley (Evans) to locate a kidnapped Santa Claus (Simmons) on Christmas Eve.
+
+                Produced by Amazon MGM Studios, Seven Bucks Productions, Chris Morgan Productions, and The Detective Agency,[7][8] Red One is seen as the first of a Christmas-themed action film franchise. Principal photography for the film began in October 2022 and concluded in February 2023, with filming locations including Atlanta.
+                
+                Red One was first released theatrically by Warner Bros. Pictures internationally on November 6, 2024, and in the United States by Metro-Goldwyn-Mayer on November 15. The film has grossed $281.5 million worldwide on a budget of $200–$250 million and received generally negative reviews from critics.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

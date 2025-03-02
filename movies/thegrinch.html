@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details </title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .movie-details {
+            display: flex;
+            flex-wrap: wrap;
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Image Section */
+        .movie-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .movie-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Details Section */
+        .movie-info {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .movie-info h1 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .movie-info .year {
+            font-size: 20px;
+            color: #ff5733;
+        }
+
+        /* Back Button */
+        .back-button {
+            align-self: flex-start;
+            text-decoration: none;
+            color: #fff;
+            background: #ff5733;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #ff784e;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .movie-details {
+                flex-direction: column;
+            }
+
+            .movie-image {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-details">
+        <!-- Image Section -->
+        <div class="movie-image">
+            <img src="../assets/7top.jpg" alt="">
+        </div>
+        <!-- Details Section -->
+        <div class="movie-info">
+            <a href="../movies.html" class="back-button">⬅ Back to Movies</a>
+            <h1>The Grinch</h1>
+            <div class="year">Release Year: <strong>2018</strong></div>
+            <p>
+                The Grinch, also known as Dr. Seuss' The Grinch, is a 2018 American animated Christmas comedy film produced by Universal Pictures and Illumination, and distributed by Universal. The third screen adaptation of Dr. Seuss' 1957 book How the Grinch Stole Christmas!, following the 1966 television special and the 2000 live-action feature-length film, it is Illumination's second Dr. Seuss film adaptation, after The Lorax in 2012. The plot follows the Grinch, who plans to stop Whoville's Christmas celebration by stealing all the town's decorations and gifts, with his pet dog Max.
+
+                The film was directed by Scott Mosier and Yarrow Cheney (in the former's feature directorial debut) and produced by Chris Meledandri and Janet Healy, from a screenplay written by Michael LeSieur and Tommy Swerdlow. The film stars the voices of Benedict Cumberbatch as the title character, with Rashida Jones, Kenan Thompson, Angela Lansbury, and Pharrell Williams, who serves as the narrator. The film was announced in 2013, and by 2016, Cumberbatch was cast as the titular character, and Cheney and Peter Candeland were set to direct. However, in 2018, Mosier took over Candeland's position as co-director. Danny Elfman composed the score, with a song written and performed by Tyler, the Creator.
+                
+                The Grinch was released in the United States on November 9, 2018. It grossed over $540 million worldwide, becoming the highest-grossing Christmas film of all time, as well as the highest-grossing Dr. Seuss film adaptation. The film received generally mixed reviews from the critics, who praised the animation and the vocal performances (particularly from Cumberbatch) but criticized the lack of creative license.[4] This was the final Dr. Seuss film adaptation to be released during the lifetime of Seuss's widow Audrey Geisel, who served as executive producer of the film and died on December 19, 2018, five weeks after the film's release.[5]
+            </p>
+        </div>
+    </div>
+</body>
+</html>

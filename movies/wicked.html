@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details </title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .movie-details {
+            display: flex;
+            flex-wrap: wrap;
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Image Section */
+        .movie-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .movie-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Details Section */
+        .movie-info {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .movie-info h1 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .movie-info .year {
+            font-size: 20px;
+            color: #ff5733;
+        }
+
+        /* Back Button */
+        .back-button {
+            align-self: flex-start;
+            text-decoration: none;
+            color: #fff;
+            background: #ff5733;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #ff784e;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .movie-details {
+                flex-direction: column;
+            }
+
+            .movie-image {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-details">
+        <!-- Image Section -->
+        <div class="movie-image">
+            <img src="../assets/20.jpg" alt="">
+        </div>
+        <!-- Details Section -->
+        <div class="movie-info">
+            <a href="../movies.html" class="back-button">⬅ Back to Movies</a>
+            <h1>Wicked</h1>
+            <div class="year">Release Year: <strong>2024</strong></div>
+            <p>
+                Wicked (titled onscreen as Wicked: Part I) is a 2024 American musical fantasy film directed by Jon M. Chu and written by Winnie Holzman and Dana Fox. It is the first installment of a two-part film adaptation of the stage musical of the same name by Stephen Schwartz and Holzman, which is loosely based on the 1995 novel, in turn based on the Oz books and the 1939 film The Wizard of Oz.
+
+                The film covers the musical's first act. It stars Cynthia Erivo as Elphaba Thropp and Ariana Grande-Butera[b] as Galinda Upland, with Jonathan Bailey, Ethan Slater, Bowen Yang, Marissa Bode, Peter Dinklage, Michelle Yeoh, and Jeff Goldblum rounding out the principal cast. Set in the Land of Oz, before Dorothy Gale's arrival from Kansas, it follows Elphaba, the future Wicked Witch of the West, and her friendship with her classmate Galinda, who becomes Glinda the Good.
+                
+                Universal Pictures and Marc Platt, who both produced the stage musical, announced the film adaptation in 2012. After a long development and multiple delays, partly due to the COVID-19 pandemic, Chu was hired to direct, with Erivo and Grande cast in 2021. The adaptation was split into two parts to avoid cutting plot points and expand the characters' journeys and relationships. Principal photography began in England in December 2022, was interrupted in July 2023 by the 2023 SAG-AFTRA strike, and was resumed and completed in January 2024.
+                
+                Wicked premiered at the State Theatre in Sydney, Australia, on November 3, 2024, and was theatrically released in the United States on November 22. It received positive reviews from critics, was named one of the best films of 2024 by the American Film Institute, and won Best Film at the National Board of Review. Its other accolades include four nominations at the 82nd Golden Globe Awards (including Best Motion Picture – Musical or Comedy) and eleven at the 30th Critics' Choice Awards (including Best Picture). It has grossed $643 million worldwide on a $150 million budget, becoming the highest-grossing Oz-related film, the highest-grossing musical film adaptation of all time, the highest-grossing musical film in the history of Universal Pictures and the sixth highest-grossing film of 2024. The sequel, Wicked: For Good, is scheduled for release in November 2025.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

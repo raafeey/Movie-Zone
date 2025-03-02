@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Movie Zone</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #2e0c0e;
+            color: #CE851E
+;
+            line-height: 1.6;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar .logo img {
+            height: 60px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #CE851E
+;
+            padding: 8px 15px;
+            border: 2px solid #CE851E
+;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            background: #CE851E
+;
+            color: #441012;
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 20px 40px;
+            max-width: 1200px;
+            margin: 20px auto;
+            background: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .about-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #CE851E
+;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #CE851E
+;
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .content-section {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .content-section:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: #CE851E
+;
+            margin-bottom: 10px;
+        }
+
+        .content-section p {
+            font-size: 1.1rem;
+            color: #fff;
+            text-align: justify;
+        }
+
+        .content-section .text {
+            flex: 1;
+        }
+
+        .content-section .image {
+            flex: 1;
+        }
+
+        .content-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 2px solid #CE851E
+;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-section {
+                flex-direction: column;
+            }
+
+            .content-section:nth-child(even) {
+                flex-direction: column;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        footer {
+            background-color: #2e0c0e;
+            text-align: center;
+            padding: 10px;
+            color: #CE851E
+;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/Screenshot_2024-12-30_180101-removebg-preview.png" alt="Movie Zone Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="movies.html">Movies</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About Movie Zone</h1>
+
+        <div class="content-section">
+            <div class="text">
+                <h2>Our Mission</h2>
+                <p>
+                    At Movie Zone, our mission is to celebrate the art of filmmaking by bringing you in-depth reviews,
+                    intriguing facts, and detailed analysis of your favorite films. We believe in connecting people
+                    through the power of storytelling and visual arts.
+                </p>
+            </div>
+            <div class="image">
+                <img src="assets/download.jfif" alt="Mission Image">
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="text">
+                <h2>Why Choose Us?</h2>
+                <p>
+                    We provide a wide range of content to enhance your understanding of cinema. From iconic blockbusters
+                    to hidden gems, we cover it all. Our team of writers and critics ensures that you receive high-quality,
+                    informative, and entertaining content.
+                </p>
+            </div>
+            <div class="image">
+                <img src="assets/download (1).jfif" alt="Why Choose Us Image">
+            </div>
+        </div>
+
+        <div class="content-section">
+            <div class="text">
+                <h2>Stay Connected</h2>
+                <p>
+                    Join our growing community of movie lovers and explore the fascinating world of cinema. Stay updated
+                    with our latest articles and feel free to share your thoughts with us. Let’s celebrate movies together!
+                </p>
+            </div>
+            <div class="image">
+                <img src="assets/wallpaper cinema.jfif" alt="Stay Connected Image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>© 2024 Movie Zone | All Rights Reserved</footer>
+</body>
+</html>

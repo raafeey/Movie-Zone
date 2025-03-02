@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Zone - Movies</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #441012;
+            color: #CE851E;
+        }
+
+        /* Navbar styles */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: rgba(0, 0, 0, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .navbar .logo img {
+            height: 60px;
+        }
+
+        .navbar .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links a {
+            text-decoration: none;
+            color: #CE851E;
+            padding: 5px 10px;
+            border: 2px solid #CE851E;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .navbar .nav-links a:hover {
+            background: #CE851E;
+            color: #441012;
+        }
+
+        /* Search bar styles */
+        .search-bar {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            width: 300px;
+            padding: 10px;
+            border: 2px solid #CE851E;
+            border-radius: 5px;
+            background: #441012;
+            color: #fff;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            background: #CE851E;
+            color: #441012;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .search-bar button:hover {
+            background: #FFD700;
+        }
+
+        /* Movies grid */
+        .movies-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .movie-card {
+            width: 200px;
+            height: 300px;
+            background: #2e0c0e;
+            border: 2px solid #CE851E;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        .movie-card img {
+            width: 100%;
+            height: 80%;
+            object-fit: cover;
+        }
+
+        .movie-card .movie-title {
+            text-align: center;
+            font-size: 16px;
+            padding: 10px;
+        }
+
+        .movie-card .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            color: #FFD700;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .movie-card:hover .overlay {
+            opacity: 1;
+        }
+        .movie-title {
+    text-align: center;
+    font-size: 18px; 
+    font-weight: bold; 
+    color: #FFD700; 
+    padding: 10px;  
+    background: rgba(0, 0, 0, 0.8); 
+    border-top: 2px solid #CE851E; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    text-decoration: none; 
+    transition: transform 0.3s, background 0.3s; 
+}
+
+.movie-title:hover {
+    transform: scale(1.1);
+    background: #CE851E; 
+    color: #441012; 
+    text-decoration: none;
+}
+.movie-card {
+    text-decoration: none;
+}
+
+
+        /* Footer */
+        footer {
+            background-color: #2e0c0e;
+            text-align: center;
+            padding: 10px;
+            color: #CE851E;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .movie-card {
+                width: 150px;
+                height: 225px;
+            }
+
+            .search-bar input {
+                width: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .movies-grid {
+                gap: 10px;
+            }
+
+            .movie-card {
+                width: 120px;
+                height: 180px;
+            }
+
+            .search-bar input {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <img src="assets/Screenshot_2024-12-30_180101-removebg-preview.png" alt="Movie Zone Logo">
+        </div>
+        <nav class="nav-links">
+            <a href="home.html">Home</a>
+            <a href="movies.html" class="active">Movies</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for a movie...">
+        <button onclick="searchMovie()">Search</button>
+    </div>
+
+        <!-- Movies Grid -->
+    <div class="movies-grid">
+        <!-- Movie Cards -->
+        <a href="movies/godfather.html" class="movie-card">
+            <img src="assets/1top.jpg" alt="The Godfather">
+            <div class="movie-title">The Godfather</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/theirishman.html" class="movie-card">
+            <img src="assets/2top.jpeg" alt="Movie">
+            <div class="movie-title">The Irishman</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/luckybaskhar.html" class="movie-card">
+            <img src="assets/3top.jpg" alt="Movie">
+            <div class="movie-title">Lucky Baskhar</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/jigra.html" class="movie-card">
+            <img src="assets/4top.avif" alt="Movie">
+            <div class="movie-title">Jigra</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/carryonjatta3.html" class="movie-card">
+            <img src="assets/5top.jpg" alt="Movie">
+            <div class="movie-title">Carry On Jatta 3</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/ourlittlesecret.html" class="movie-card">
+            <img src="assets/6top.webp" alt="Movie">
+            <div class="movie-title">Our Little Secret</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/thegrinch.html" class="movie-card">
+            <img src="assets/7top.jpg" alt="Movie">
+            <div class="movie-title">The Grinch</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/snowmaggdom.html" class="movie-card">
+            <img src="assets/8top.jpg" alt="Movie">
+            <div class="movie-title">Snaowmageddon</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/despecableme4.html" class="movie-card">
+            <img src="assets/9.jpg" alt="Movie">
+            <div class="movie-title">Despicable Me4</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/thebeekep.html" class="movie-card">
+            <img src="assets/10.png" alt="Movie">
+            <div class="movie-title">The Beekeeper</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/sikkenderkamukaddar.html" class="movie-card">
+            <img src="assets/11.jpg" alt="Movie">
+            <div class="movie-title">Sikkernder Ka Mukkadr</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/moana2.html" class="movie-card">
+            <img src="assets/12.jpg" alt="Movie">
+            <div class="movie-title">Moana 2</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/insideout.html" class="movie-card">
+            <img src="assets/13.webp" alt="Movie">
+            <div class="movie-title">Inside Out 2</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/itendswithus.html" class="movie-card">
+            <img src="assets/14.jpg" alt="Movie">
+            <div class="movie-title">It Ends With Us</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/kingdom.html" class="movie-card">
+            <img src="assets/15.avif" alt="Movie">
+            <div class="movie-title">Kingdom of the Planet of the Apes</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/jattandjuliet3.html" class="movie-card">
+            <img src="assets/16.jpg" alt="Movie">
+            <div class="movie-title">Jutt And Juliet 3</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/redone.html" class="movie-card">
+            <img src="assets/17.avif" alt="Movie">
+            <div class="movie-title">Red One</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/theideaofyou.html" class="movie-card">
+            <img src="assets/18.jpg" alt="Movie">
+            <div class="movie-title">The Idea of You </div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/twisters.html" class="movie-card">
+            <img src="assets/19.jpg" alt="Movie">
+            <div class="movie-title">Twister</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <a href="movies/wicked.html" class="movie-card">
+            <img src="assets/20.jpg" alt="Movie">
+            <div class="movie-title">Wicked</div>
+            <div class="overlay">View Details</div>
+        </a>
+        <!-- Repeat for 20 movies -->
+    </div>
+    <!-- Footer -->
+    <footer>© 2024 Movie Zone | All Rights Reserved</footer>
+
+    <script>
+        // Search Functionality
+        function searchMovie() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            const movies = document.querySelectorAll('.movie-card');
+            movies.forEach(movie => {
+                const title = movie.querySelector('.movie-title').textContent.toLowerCase();
+                if (title.includes(query)) {
+                    movie.style.display = 'block';
+                } else {
+                    movie.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Details </title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1c1c1c;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Container */
+        .movie-details {
+            display: flex;
+            flex-wrap: wrap;
+            background: #2a2a2a;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        /* Image Section */
+        .movie-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .movie-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .movie-image:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Details Section */
+        .movie-info {
+            flex: 2;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .movie-info h1 {
+            font-size: 32px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .movie-info p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #ddd;
+        }
+
+        .movie-info .year {
+            font-size: 20px;
+            color: #ff5733;
+        }
+
+        /* Back Button */
+        .back-button {
+            align-self: flex-start;
+            text-decoration: none;
+            color: #fff;
+            background: #ff5733;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #ff784e;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .movie-details {
+                flex-direction: column;
+            }
+
+            .movie-image {
+                min-height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="movie-details">
+        <!-- Image Section -->
+        <div class="movie-image">
+            <img src="../assets/5top.jpg" alt="">
+        </div>
+        <!-- Details Section -->
+        <div class="movie-info">
+            <a href="../movies.html" class="back-button">⬅ Back to Movies</a>
+            <h1>Carry on Jatta 3</h1>
+            <div class="year">Release Year: <strong>2023</strong></div>
+            <p>
+                Carry On Jatta 3, also known by the initialism COJ3, is a 2023 Indian Punjabi-language comedy film directed by Smeep Kang and produced by Humble Motion Pictures. A sequel to both Carry on Jatta (2012) and Carry On Jatta 2 (2018), it stars Gippy Grewal, Binnu Dhillon and Sonam Bajwa in the lead roles with Gurpreet Ghuggi, Kavita Kaushik, Nasir Chinyoti, Jaswinder Bhalla, B.N. Sharma and Karamjit Anmol in supporting roles.[3][4]
+            </p>
+        </div>
+    </div>
+</body>
+</html>

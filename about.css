@@ -1,0 +1,149 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2e0c0e;
+    color: #CE851E
+;
+    line-height: 1.6;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(0, 0, 0, 0.8);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar .logo img {
+    height: 60px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    text-decoration: none;
+    color: #CE851E
+;
+    padding: 8px 15px;
+    border: 2px solid #CE851E
+;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.navbar .nav-links a:hover {
+    background: #CE851E
+;
+    color: #441012;
+}
+
+/* About Section */
+.about-section {
+    padding: 20px 40px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.about-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #CE851E
+;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #CE851E
+;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.content-section {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.content-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: #CE851E
+;
+    margin-bottom: 10px;
+}
+
+.content-section p {
+    font-size: 1.1rem;
+    color: #fff;
+    text-align: justify;
+}
+
+.content-section .text {
+    flex: 1;
+}
+
+.content-section .image {
+    flex: 1;
+}
+
+.content-section img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 2px solid #CE851E
+;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+    }
+
+    .content-section:nth-child(even) {
+        flex-direction: column;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background-color: #2e0c0e;
+    text-align: center;
+    padding: 10px;
+    color: #CE851E
+;
+    margin-top: 20px;
+}

@@ -4,109 +4,109 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Zone - Login/Signup</title>
-    <style>
-        /* CSS Styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #441012;
-            color: #CE851E;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            overflow: hidden;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 400px;
-            padding: 20px;
-            background: #2e0c0e;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-            text-align: center;
-        }
-
-        h1 {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #CE851E;
-        }
-
-        .form-toggle {
-            display: flex;
-            justify-content: space-around;
-            margin-bottom: 20px;
-        }
-
-        .form-toggle button {
-            background: none;
-            border: none;
-            font-size: 16px;
-            color: #CE851E;
-            cursor: pointer;
-            padding: 10px;
-            transition: color 0.3s;
-        }
-
-        .form-toggle button.active {
-            color: #FFD700;
-            border-bottom: 2px solid #FFD700;
-        }
-
-        .form {
-            display: none;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .form.active {
-            display: flex;
-        }
-
-        input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #CE851E;
-            border-radius: 5px;
-            background: #441012;
-            color: white;
-            outline: none;
-        }
-
-        input::placeholder {
-            color: #CE851E;
-        }
-
-        button[type="submit"] {
-            padding: 10px;
-            background: #CE851E;
-            color: #441012;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s;
-        }
-
-        button[type="submit"]:hover {
-            background: #FFD700;
-        }
-
-        .error {
-            color: red;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-
-        .success {
-            color: green;
-            font-size: 14px;
-            margin-top: 5px;
-        }
-    </style>
 </head>
+<style>
+     /* CSS Styles */
+ body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #441012;
+    color: #CE851E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    padding: 20px;
+    background: #2e0c0e;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #CE851E;
+}
+
+.form-toggle {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.form-toggle button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #CE851E;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.form-toggle button.active {
+    color: #FFD700;
+    border-bottom: 2px solid #FFD700;
+}
+
+.form {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form.active {
+    display: flex;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #CE851E;
+    border-radius: 5px;
+    background: #441012;
+    color: white;
+    outline: none;
+}
+
+input::placeholder {
+    color: #CE851E;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background: #CE851E;
+    color: #441012;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button[type="submit"]:hover {
+    background: #FFD700;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.success {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+}
+</style>
 <body>
 
 <?php

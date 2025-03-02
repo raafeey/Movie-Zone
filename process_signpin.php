@@ -53,6 +53,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 // Redirect back to signupin.php to show messages
-header('Location: signupin.php');
+header('Location: index.php');
 exit;
 ?>
